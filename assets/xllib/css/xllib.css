@@ -1,0 +1,104 @@
+:root {
+    --xllib-header-height: 30px;
+    --xllib-header-border-color: #888;
+    --xllib-header-background-color: #ddd;
+    --xllib-header-margin: 6px 12px;
+
+    --xllib-selected-address-width: 80px;
+
+    --xllib-scroll-width-height: 20px;
+    --xllib-scroll-background-color: #ddd;
+    --xllib-scroll-foreground-color: #bbb;
+}
+
+.xllib-container * {
+    box-sizing: border-box;
+}
+
+.xllib-container {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+}
+
+.xllib-header {
+    display: flex;
+    flex-flow: row;
+    border: 1px solid var(--xllib-header-border-color);
+    height: var(--xllib-header-height);
+    background-color: var(--xllib-header-background-color);
+}
+
+.xllib-header-address {
+    width: var(--xllib-selected-address-width);
+    border-right: 1px solid var(--xllib-header-border-color);
+    margin: var(--xllib-header-margin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.xllib-header-formula {
+    flex: 1;
+    margin: var(--xllib-header-margin);
+    margin-left: 0;
+}
+
+.xllib-body {
+    display: flex;
+    flex-flow: row;
+    flex: 1;
+    width: 100%;
+}
+
+.xllib-content {
+    flex: 1;
+    position: relative;
+}
+
+.xllib-content canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.xllib-vertical-scroll,
+.xllib-horizontal-scroll {
+    background-color: var(--xllib-scroll-background-color);
+    position: relative;
+    cursor: pointer;
+}
+
+.xllib-scroll {
+    position: absolute;
+    background-color: var(--xllib-scroll-foreground-color);
+    border: 1px solid var(--xllib-header-border-color);
+}
+
+.xllib-vertical-scroll,
+.xllib-vertical-scroll .xllib-scroll {
+    width: var(--xllib-scroll-width-height);
+}
+
+.xllib-vertical-scroll .xllib-scroll {
+    left: 0;
+    height: 80%;
+}
+
+.xllib-horizontal-scroll {
+    margin-right: var(--xllib-scroll-width-height);
+}
+
+.xllib-horizontal-scroll,
+.xllib-horizontal-scroll .xllib-scroll {
+    height: var(--xllib-scroll-width-height);
+}
+
+.xllib-horizontal-scroll .xllib-scroll {
+    top: 0;
+    width: 80%;
+}

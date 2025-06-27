@@ -5,14 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XLLib Demo</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="./assets/xllib/css/xllib.css" type="text/css" />
+    <script src="./assets/xllib/xllib-core.js" type="module"></script>
 </head>
 
 <body id="xllib-target">
     <div class="xllib-container">
-        <canvas class="xllib-background"></canvas>
-        <canvas class="xllib-grid"></canvas>
-        <canvas class="xllib-data"></canvas>
-        <canvas class="xllib-overlay"></canvas>
+        <div class="xllib-header">
+            <div class="xllib-header-address"></div>
+            <div class="xllib-header-formula"></div>
+        </div>
+        <div class="xllib-body">
+            <div class="xllib-content">
+                <canvas class="xllib-background"></canvas>
+                <canvas class="xllib-grid"></canvas>
+                <canvas class="xllib-data"></canvas>
+                <canvas class="xllib-overlay"></canvas>
+            </div>
+            <div class="xllib-vertical-scroll">
+                <div class="xllib-scroll"></div>
+            </div>
+        </div>
+        <div class="xllib-horizontal-scroll">
+            <div class="xllib-scroll"></div>
+        </div>
+        <div class="xllib-input-controls"></div>
     </div>
 </body>
 
